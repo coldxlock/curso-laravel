@@ -13,6 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get("/login", function(){
+    return "Hey he";
+})->name('url.name');
+
+Route::get('/admin/dashboard', function(){
+    return "Home admin";
+})->middleware('auth');
+
+Route::get('/admin/financeiro', function(){
+    return "Financeiro Admin";
+});
+
+Route::get('/admin/produtos', function(){
+    return "Produtos Admin";
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
